@@ -18,7 +18,7 @@ class Book(models.Model):
         return self.title
 
 class Genre(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name="На")
     books = models.ManyToManyField(Book, related_name='genres')
 
     def __str__(self):
